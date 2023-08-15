@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+
+.nav_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: flex-end;
+  background: rgba(29, 29, 29, .5);
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  z-index: 10;
+
+
+
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+
+
+
+}
+
+.nav_links li {
+  margin: 0 30px;
+}
+
+a,
+ul {
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6) url(/img/wallpaperbetter.com_1366x768.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile {
+  position: relative;
+  width: 70%;
+  height: 60%;
+  background-color: #fff5ee;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 5px 5px 0 0;
+  z-index: 9;
+
+
+}
+
+.picture {
+  margin: 10px;
+  padding: 50px 100px;
+  background: url(https://cdn-images.livecareer.es/pages/foto_cv_lc_es_4.jpg) no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+
+}
+
+.data {
+
+  /* background: yellow; */
+  padding: 50px;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.data_container1 h1 {
+  font-size: 4vmin;
+}
+
+#name {
+  font-size: 4vmin;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+
+.data_container2 {
+  margin: 100px 0;
+  display: flex;
+
+}
+
+.data_container2 .info1 p {
+  margin: 20px 0;
+  font-size: 1em;
+  color: #000;
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+
+
+}
+
+.data_container2 .info2 {
+  margin-left: 120px;
+}
+
+.data_container2 .info2 p {
+  margin-top: 20px;
+  color: #6D6D6D;
+}
+
+/* hover underline de la navbar */
+
+
+a {
+  position: relative;
+  color: #DBDCDE;
+  /* Color del texto sin subrayar */
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #e55137;
+  /* Color del subrayado */
+  animation: underline 0.5s ease-in-out;
+
+}
+
+@keyframes underline {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+
+}
+
+/* redes sociales */
+
+.media {
+  position: relative;
+  background-color: #e55137;
+  width: 70%;
+  height: 5em;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+
+}
+
+
+.media_links {
+  display: inline-block;
+  color: #fff;
+  margin-left: 100px;
+  transition: all .3s ease-in-out;
+
+}
+
+i {
+  font-size: 1.2em;
+}
+
+.media_links:hover {
+  transform: scale(1.5);
+}
+
+
+/* Seccion 1 */
+
+.modulo {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  margin-top: 700px;
+  background: #fff;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+
+}
+
+.texto {
+  text-align: center;
+  color: #292929;
+  margin: 40px;
+
+}
+
+.texto p {
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #000;
+  background: none;
+  padding: 15px 100px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+  border: none;
+  background-color: #e55137;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Acordion inicio*/
+
+.article {
+  position: relative;
+  width: 100%;
+  /* height: 500px; */
+  /* background-color: green; */
+  margin-top: 200px;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.active,
+.accordion:hover {
+  background-color: #e55137;
+  color: #fff;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Acordion fin */
